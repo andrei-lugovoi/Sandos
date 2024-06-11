@@ -1,3 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿var array = new[] {"1", "2", "3", "4", "5"};
 
-Console.WriteLine("Hello, World!");
+var a = array[2];
+var b = array[3];
+
+void Swap<T>(ref T one, ref T two)
+{
+  (two, one) = (one, two);
+}
+
+Swap(ref a, ref b);
+
+foreach (var i in array) 
+  Console.WriteLine(i);
